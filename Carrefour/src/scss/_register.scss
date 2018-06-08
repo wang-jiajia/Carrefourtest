@@ -1,0 +1,151 @@
+//注册页部分样式与登录页共用_login.scss
+.login_reg_wrapper{
+    .JumpToLogin{
+        margin-top: 80px;
+        margin-right: 40px;
+        a{
+            color: #005aa9;
+            margin-left: 8px;
+            margin-right: 20px;
+        }
+    }
+}
+#reg_box{
+    @include background-set("../img/registerbd.png",repeat-x);
+    .reg_container{
+        position: relative;
+        height: 610px;
+    }
+}
+#reg_box .headbox{
+    width: 685px;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 auto;
+    p{
+        text-align: center;
+        margin-top: 25px;
+        height: 33px;
+        line-height: 33px;
+        font-weight: bold;
+        color: #000;
+        font-family: 'Microsoft Yahei';
+        font-size: 20px;
+        i{
+            display: inline-block;
+            width: 30px;
+            height: 33px;
+            @include background-set("../img/loginSprite.png",no-repeat,0,-163px);
+            vertical-align: middle;
+        }
+    }
+    .underline{
+        position: relative;
+        width: 685px;
+        background-color: #eaeaea;
+        height: 2px;
+        margin-top: 20px;
+        .redline{
+            position: absolute;
+            top:0;
+            left:50%;
+            margin-left: -190px;
+            background-color: red;
+            height: 2px;
+            width: 380px;
+        }
+    }
+}
+.protocolCheckBox{
+    width: 665px;
+    margin: 0 auto;
+    display: none;
+    .protocolContent{
+        width: 665px;
+        height: 265px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .protocolAgree{
+        width: 665px;
+        margin-left: 10px;
+        font-size: 12px;
+        color: #333;
+        line-height: 23px;
+    }
+    button.agreeBtn{
+        width: 120px;
+        margin-left: 280px;
+        margin-top: 10px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #ed1b24;
+        color: #fff;
+        border: 0;
+        font-size: 15px;
+        font-weight: bold;
+        @include border_radius-set(3px);
+    }
+}
+.regFormBox{
+    width: 610px;
+    margin: -32px auto 0;
+    div{
+        line-height: 44px;
+        position: relative;
+        height: 44px;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+    label.items{
+        font-size: 14px;
+        display: inline-block;
+        float: left;
+        width: 150px;
+        margin-right: 14px;
+        text-align: right;
+    }
+    label.tip{
+        position: absolute;
+        left: 505px;
+        height: 42px;
+        padding: 0 10px;
+        white-space: nowrap;
+        @include border-set(#e3e3e3);
+        background-color: #f4f4f4;
+    }
+    label.error{
+        @extend label.tip;
+        display: none;
+        color: #ed1b23;
+        @include border-set(#ed1b23);
+        background-color: #ffecec;
+    }
+    input[type="text"]{
+        float: left;
+        width: 311px;
+        height: 22px;
+        padding: 10px;
+        border: 1px solid #d3d3d3;
+        outline: 0;
+    }
+    input[type="password"]{
+        @extend input[type="text"]
+    }
+    .button{
+        font-family: 'Microsoft Yahei';
+        font-size: 18px;
+        width: 333px;
+        height: 44px;
+        margin-top: 22px;
+        margin-left: 164px;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        border: 0;
+        outline: 0;
+        background: #ed1b23;
+    }
+}

@@ -1,0 +1,183 @@
+.login_reg_narrow_wrapper{
+	width: 940px;
+	margin: 0 auto;
+}
+#login_reg_header{
+	background:	#fafafa;
+	.login_reg_wrapper{
+		width: 1260px;
+		margin: 0 auto;
+		position: relative;
+		div.logo{
+			position: absolute;
+			left: 3px;
+			top: 38px;
+			@include border-set(#f2f2f2);
+			@include box_shadow-set(0,5px,15px,0,#f2f2f2);
+		}
+		.login_reg_narrow_wrapper{
+			height: 100px;
+		}
+	}
+}
+.login_reg_wrapper {
+	div.logo{
+		a {
+			@extend %block;
+		}
+	}
+	div.welcomeImg{
+		margin-left: 102px;
+	}
+	div.enSite{
+		margin-top: 80px;
+		margin-right: 40px;
+		a{
+			font-size: 13px;
+			color:#666;
+		}
+	}
+}
+#login_box{
+	@include background-set("../img/loginbd.png",repeat-x)
+	.login_container{
+		position: relative;
+		height: 460px;
+		.loginAd{
+			position: absolute;
+			top: 10px;
+			left: 100px;
+			width: 400px;
+			height: 400px;
+		}
+	}
+}
+.loginFormBox{
+	position: relative;
+	width: 376px;
+	margin-top: 58px;
+	.infoInPut{
+		line-height: 42px;
+		width: 331px;
+		height: 42px;
+		margin-bottom: 20px;
+		vertical-align: middle;
+		border: 1px solid #d3d3d3;
+		label{
+			display: inline-block;
+			float: left;
+			width: 37px;
+			height: 42px;
+		}
+		input{
+			margin-top: 8px;
+			width: 280px;
+			height: 26px;
+			line-height: 26px;
+			padding-left: 9px;
+			border:0;
+			border-left:1px solid #eaeaea;
+		}
+	}
+	.nameInput{
+		label{
+			@include background-set ('../img/loginSprite.png',no-repeat);
+		}
+	}
+	.psInput{
+		label{
+			@include background-set ('../img/loginSprite.png',no-repeat,0,-42px);
+		}
+	}
+	.loginError{
+		line-height: 25px;
+		position: absolute;
+		top: -35px;
+		left: 0;
+		min-width: 330px;
+		height: 25px;
+		padding: 2px 0 2px 3px;
+		white-space: nowrap;
+		color: #ed1b23;
+		background: #fff8d4;
+		display: none;
+		i{
+			float: left;
+			width: 16px;
+			height: 16px;
+			margin:4px 10px 0 4px;
+			@include background-set("../img/loginSprite.png",no-repeat,-43px,-122px);
+		}
+	}
+	.grayColor{
+		color: #9e9e9e;
+	}
+	.rememberCheck{
+		margin-top: 90px;
+		color: #d3d3d3;
+		#rememberCheck{
+			position: relative;
+			top: 4px;
+			width: 15px;
+			height: 15px;
+			margin-right: 6px;
+			@include border-set(#d3d3d3);
+		}
+		label{
+			margin-right: 2px;
+			color: #333;
+		}
+		a{
+			color: #333;
+		}
+	}
+	.loginBtn{
+		.button{
+			font-size: 18px;
+			width: 333px;
+			height: 44px;
+			margin-top: 20px;
+			cursor: pointer;
+			text-align: center;
+			color: #FFF;
+			border: 0;
+			outline: 0;
+			background: #ed1b23;
+		}
+	}
+}
+.jumpToReg{
+	position: relative;
+	width: 333px;
+	margin-top: 18px;
+	color: #d3d3d3;
+	border-top: 1px solid #d3d3d3;
+	a{
+		@extend %block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 92px;
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+		text-align: center;
+		color: #FFF;
+		@include background-set("../img/loginSprite.png",no-repeat,0,-85px);
+	}
+}
+#login_reg_footer{
+	.login_reg_narrow_wrapper{
+		margin-top: 30px;
+		p{
+			text-align: center;
+			color: #9e9e9e;
+			a{
+				@extend %block;
+				width: 47px;
+				outline: 0;
+				margin: 0 auto;
+			}
+		}
+	}
+}

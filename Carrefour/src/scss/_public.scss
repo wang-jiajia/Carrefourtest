@@ -1,0 +1,65 @@
+*{margin:0;padding:0}
+.clearfix:after{content:".";height:0;display:block;clear:both;overflow:hidden;visibility:hidden;}
+.fl{float:left}
+.fr{float:right}
+.hide{display:none}
+li{list-style:none}
+a{text-decoration:none}
+a:hover{text-decoration: underline}
+img{display:block;border:0}
+em,i{font-style: normal}
+strong,b{font-weight: normal}
+body{font: 12px/150% "Verdana,Arial,SimSun,Microsoft Yahei"}
+
+%block{
+	display: block;
+}
+
+@mixin border-set($color:#000,$width:1px,$style:solid){
+    border:$width $style $color;
+}
+
+@mixin opacity-set($opacity){
+    opacity:$opacity;
+    $ieopacity:$opacity*100;
+    filter:alpha(opacity=$ieopacity);
+}
+
+@mixin border_radius-set($radius:5px){
+	border-radius:$radius;
+	-webkit-border-radius:$radius;
+	-ms-border-radius:$radius;
+	-moz-border-radius:$radius;
+    -o-border-radius:$radius;
+}
+
+@mixin text_ellipsis($width:100px){
+	width:$width;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+@mixin box_shadow-set($x,$y,$blur,$spread,$color){
+    -webkit-box-shadow: $x $y $blur $spread $color;
+	-moz-box-shadow: $x $y $blur $spread $color;
+    box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin transition-set($time,$attr:all){
+	transition: $attr $time;
+	-moz-transition: $attr $time;
+	-webkit-transition: $attr $time;
+	-o-transition: $attr $time;
+}
+
+
+@mixin background-set($url,$repeat:no-repeat,$x:0,$y:0){
+	background: url($url) $x $y $repeat ;
+}
+
+@mixin position-set($type,$left:0,$top:0){
+	position:$type;
+	left:$left;
+	top:$top;
+}
