@@ -1,15 +1,56 @@
 *{margin:0;padding:0}
-.clearfix:after{content:".";height:0;display:block;clear:both;overflow:hidden;visibility:hidden;}
-.fl{float:left}
-.fr{float:right}
-.hide{display:none}
-li{list-style:none}
-a{text-decoration:none}
-a:hover{text-decoration: underline}
-img{display:block;border:0}
-em,i{font-style: normal}
-strong,b{font-weight: normal}
-body{font: 12px/150% "Verdana,Arial,SimSun,Microsoft Yahei"}
+.clearfix:after{
+	content:".";
+	height:0;
+	display:block;
+	clear:both;
+	overflow:hidden;
+	visibility:hidden;
+}
+.fl{
+	float:left
+}
+.fr{
+	float:right
+}
+.hide{
+	display:none
+}
+.z10{
+	z-index:10
+}
+.z20{
+	z-index:20
+}
+.main_wrapper{
+	width: 1210px;
+	margin: 0 auto;
+}
+li{
+	list-style:none
+}
+a{
+	text-decoration:none
+}
+a:hover{
+	text-decoration: underline
+}
+img{
+	display:block;
+	border:0
+}
+em,i{
+	font-style: normal
+}
+strong,b{
+	font-weight: normal
+}
+body{
+	font: 12px/150% "Verdana,Arial,SimSun,Microsoft Yahei"
+}
+
+$rel:relative;
+$abs:absolute;
 
 %block{
 	display: block;
@@ -51,6 +92,7 @@ body{font: 12px/150% "Verdana,Arial,SimSun,Microsoft Yahei"}
 	-moz-transition: $attr $time;
 	-webkit-transition: $attr $time;
 	-o-transition: $attr $time;
+	-ms-transition: $attr $time;
 }
 
 
@@ -62,4 +104,12 @@ body{font: 12px/150% "Verdana,Arial,SimSun,Microsoft Yahei"}
 	position:$type;
 	left:$left;
 	top:$top;
+}
+
+@mixin rotate360(){
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
 }

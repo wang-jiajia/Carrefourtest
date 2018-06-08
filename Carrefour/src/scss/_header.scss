@@ -1,0 +1,139 @@
+.homepage{
+    font-size: 13px;
+}
+#siteNav{
+    width:100%;
+    line-height: 28px;
+    border-bottom: 1px solid #ececec;
+    background-color: #f6f6f6;
+    a{
+        color: #1e1e1e;
+    }
+    .collect{
+        position: $rel;
+        padding: 0 10px 0 18px;
+        height: 28px;
+        i{
+            position: $abs;
+            top: 7px;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            @include background-set("../img/indexSprite.png",no-repeat,0,-9px);
+            @include transition-set(0.2s);
+        }
+        &:hover i{
+            @include rotate360;
+        }
+    }
+    .regionSelect{
+        position: $rel;
+        height: 28px;
+        padding: 0 30px 0 20px;
+        i{
+            position: $abs;
+            top: 5px;
+            left: 0;
+            width: 12px;
+            height: 15px;
+            margin-left: 6px;
+            @include background-set("../img/indexSprite.png",no-repeat,-21px,-9px);
+        }
+        strong{
+            font-weight: bold;
+        }
+        a{
+            color: #005aa9;
+        }
+    }
+    .topMenu{
+        .menuBox>li{
+            float: left;
+            position: $rel;
+            padding: 0 10px;
+        }
+        a{
+            position: $rel;
+        }
+        b{
+            position: $abs;
+            top: 9px;
+            left: 0;
+            overflow: hidden;
+            width: 0;
+            height: 12px;
+            border-left: 1px solid #ddd;
+        }
+        .login_reg{
+            height: 28px;
+            padding: 0 10px 0 10px;
+        }
+        .myMenu{
+            padding-right: 20px !important;
+            i{
+                position: $abs;
+                z-index: 20;
+                top: 12px;
+                right: 8px;
+                width: 9px;
+                height: 6px;
+                @include background-set("../img/indexSprite.png",no-repeat,-37px,-13px);
+            }
+        }
+        .mobile,.service{
+            @extend .myMenu;
+        }
+    }
+    
+}
+#siteNav{
+    .myMenu{
+        ul{
+            position: $abs;
+            z-index: 10;
+            right: -1px;
+            width: 95%;
+            padding-bottom: 8px;
+            @include border-set(#ececec);
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,.12);
+            display: none;
+            li{
+                margin-left: 12px;
+            }
+        }
+        .whiteBg{
+            position: $abs;
+            z-index: 11;
+            top: 3px;
+            right: -1px;
+            height: 25px;
+            width: 95%;
+            background-color: #fff;
+            @include border-set(#ececec);
+            border-bottom: 0;
+            display: none;
+        }
+        &:hover{
+            ul,.whiteBg{
+                display: block;
+            }
+        }
+    }
+    .mobile{
+        ul{
+            left: 2px;
+            width: 262px !important;
+        }
+        li{
+            margin-left: 0 !important;
+            float: left;
+        }
+    }
+    .service{
+        ul{
+            left: 3px;
+            width: 90px !important;
+        }
+    }
+}
