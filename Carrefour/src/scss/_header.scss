@@ -137,3 +137,236 @@
         }
     }
 }
+.headLeft{
+    .biglogo{
+        display:block;
+        width:210px;
+        height:230px;
+        margin-bottom: 6px;
+    }
+    .categoryTitle{
+        a{
+            width: 210px;
+            font: bold 15px/34px 'Microsoft Yahei';
+            position: $rel;
+            display: block;
+            width: 210px;
+            height: 34px;
+            text-align: center;
+            color: #fff;
+            background-color: #ed1b23;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        i{
+            position: $abs;
+            top: 13px;
+            right: 45px;
+            width: 11px;
+            height: 11px;
+            @include background-set("../img/category-arrow-down.png",no-repeat);
+        } 
+    }
+}
+.headRight{
+    width: 1000px;
+}
+.mallCart{
+    line-height: 39px;
+    position: $rel;
+    float: right;
+    width: 138px;
+    height: 39px;
+    margin-top: 52px;
+    margin-left: 122px;
+    color: #666;
+    &:hover .cartTitle{
+        @include background-set("../img/indexSprite.png",no-repeat,0,-397px);
+    }
+    &:hover .cartInfo{
+        display: block;
+    }
+    .cartTitle{
+        position: $abs;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include background-set("../img/indexSprite2.png",no-repeat,0,-430px);
+        span{
+            margin-left: 54px;
+            color: #1e1e1e;
+        }
+        strong{
+            font-weight: bold;
+            color: #ed1b23;
+        }
+    }
+    .cartInfo{
+        position: absolute;
+        z-index: 20;
+        top: 38px;
+        right: 0;
+        display: none;
+        width: 308px;
+        border: 1px solid #e5e5e5;
+        background-color: #FFF;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        h4{
+            line-height: 35px;
+            height: 40px;
+            padding-left: 16px;
+            color: #9e9e9e;
+            background: #f1f1f1;
+        }
+        ul{
+            overflow: auto;
+            max-height: 430px;
+            background-color: #fff;
+        }
+        .cartFooter{
+            padding-bottom: 16px;
+            text-align: right;
+        }
+        img.nothing{
+            float: left;
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+        span.nothing{
+            font-family: 'Microsoft Yahei';
+            font-size: 18px;
+            float: left;
+            clear: both;
+            margin-top: -20px;
+            margin-left: 117px;
+            color: #9e9e9e;
+        }
+    }
+}
+.searchBar{
+    position: relative;
+    width: 600px;
+    margin-top: 52px;
+    #searchText{
+        float: left;
+        width: 438px;
+        height: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 8px;
+        vertical-align: middle;
+        border: 2px solid #ed1b23;
+        outline: 0;
+    }
+    #searchBtn{
+        font: 17px/36px "Microsoft Yahei";
+        float: left;
+        width: 97px;
+        height: 39px;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        border: 0;
+        outline: 0;
+        background-color: #ed1b23;
+    }
+    .hotWord{
+        overflow: hidden;
+        width: 560px;
+        height: 26px;
+        color: #9e9e9e;
+        a{
+            font-size: 12px;
+            display: inline-block;
+            padding: 4px 8px;
+            color: #9e9e9e;
+        }
+    }
+}
+.mainNav{
+    position: relative;
+    width: 1000px;
+    height: 72px;
+    .menuList{
+        line-height: 32px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        height: 32px;
+        li{
+            font-family: 'Microsoft Yahei';
+            font-size: 14px;
+            float: left;
+            margin: 0 20px;
+            text-align: center;
+        }
+        a{
+            color: #1e1e1e;
+        }
+    }
+    a.homepg{
+        color: #ed1b24;
+    }
+    .hdAd{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+.fixedBar{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 58px;
+    .barBg{
+        position: $abs;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        opacity: 0.95;
+        background: #005aaa;
+    }
+    .barContent{
+        position: $rel;
+        z-index: 20;
+    }
+    .slogo{
+        width: 278px;
+        height: 58px;
+    }
+    #fixed_searchText{
+        float: left;
+        width: 518px;
+        height: 16px;
+        margin-top: 10px;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        padding-left: 12px;
+        border: 0;
+        outline: 0;
+    }
+    #fixed_searchBtn{
+        float: left;
+        font: 17px/38px "Microsoft Yahei";
+        width: 112px;
+        height: 38px;
+        margin-top: 10px;
+        padding: 0;
+        cursor: pointer;
+        color: #fff;
+        border: 0;
+        outline: 0;
+        background-color: #ed1b23;
+    }
+    .mallCart{
+        margin-top: 9px;
+        margin-right: 18px;
+    }
+}

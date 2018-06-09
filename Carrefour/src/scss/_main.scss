@@ -1,0 +1,284 @@
+.category-menu{
+    font-family: 'microsoft yahei';
+    width: 210px;
+    height: 475px;
+    padding-top: 5px;
+    background-color: #ed1b23;
+    background-image: url(../img/all-category.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    ul.category-two>li{
+        position: relative;
+        z-index: 20;
+        margin-left: 6px;
+        padding-left: 0;
+        height: 42px;
+        line-height: 42px;
+        img{
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin: 12px 5px 0;
+        }
+        &>a{
+            overflow: hidden;
+            color: #fff;
+            float: left;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        &:hover{
+            background: #fff;
+        }
+        &:hover>a{
+            color: #ed1b23;
+        }
+        &:hover img{
+            display: none;
+        }
+        &:hover .hide{
+            display: inline-block;
+        }
+        &:hover .category-three{
+            display: block;
+        }
+    }
+}
+.category-three{
+    position: absolute;
+    z-index: 20;
+    top: 0px;
+    left: 203px;
+    display: none;
+    width: 390px;
+    min-height: 458px;
+    padding: 10px 0 10px 5px;
+    opacity: 0.98;
+    background: #fff;
+    box-shadow: 4px 2px 4px rgba(0,0,0,.1);
+    @include border-set(#e4212d);
+    li{
+        line-height: 20px;
+        height: auto;
+        margin: 0 0 15px 0;
+        overflow: hidden;
+        .category-title{
+            font-weight: normal;
+            float: left;
+            width: 85px;
+            margin-right: 10px;
+            padding-right: 10px;
+            text-align: right;
+            border-right: 1px solid #e7e7e7;
+            a{
+                font-size: 14px;
+                float: right;
+                overflow: hidden;
+                width: 100%;
+                text-overflow: ellipsis;
+                color: #ed1b23;
+            }
+        }
+        span{
+            display: inline-block;
+            float: left;
+            width: 280px;
+            a{
+                float: left;
+                max-width: 200px;
+                margin-right: 12px;
+                color: #1e1e1e;
+            }
+        }
+    }
+}
+@for $i from 1 through 10{
+    .category-three-#{$i}{
+        top: -42px*$i+37px;
+    }
+}
+.bannerBox{
+    position: relative;
+    overflow: hidden;
+    width: 790px;
+    height: 480px;
+    .bannerList{
+        position: absolute;
+        top: 0;
+        left: 0;
+        li{
+            float: left;
+            width: 790px;
+            height: 480px;
+            background:#24f906;
+        }
+    }
+    .orderDot{
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 50%;
+        margin-bottom: 16px;
+        margin-left: -60px;
+        li{
+            line-height: 18px;
+            float: left;
+            width: 18px;
+            height: 18px;
+            margin-right: 6px;
+            cursor: pointer;
+            text-align: center;
+            color: #fff;
+            background-color: #d6d6d6;
+            @include border-radius-set(50%);
+        }
+        .active{
+            background: #ed1b23;
+        }
+    }
+    %arrow{
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 50%;
+        margin-top: -13px;
+        background: rgba(0,0,0,0.5);
+        cursor: pointer;
+        @include border-radius-set(50%);
+        span{
+            display: block;
+            width: 11px;
+            height: 17px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        
+    }
+    .arrow-left{
+        @extend %arrow;
+        left: 10px;
+        span{
+            @include background-set("../img/slider-left.png");
+        }
+        
+    }
+    .arrow-right{
+        @extend %arrow;
+        right: 10px;
+        span{
+            @include background-set("../img/slider-right.png");
+        }
+    }
+}
+.rightAd a{
+    overflow: hidden;
+    display: block;
+    width: 210px;
+    height: 240px;
+    img{
+        margin-left: 0;
+    }
+}
+.promotion{
+    overflow: hidden;
+    margin-top: 32px;
+}
+.proContent{
+    width: 1000px;
+    .tabs li{
+        float: left;
+        width: 250px;
+        height: 51px;
+        background: rgb(238, 238, 238);
+        .on{
+            display: none;
+        }
+        .off{
+            display: block;
+        }
+    }
+    .tabs .active{
+        background: rgb(0, 90, 170);
+        .on{
+            display: block;
+        }
+        .off{
+            display: none;
+        }
+    }
+}
+.proList{
+    width: 998px;
+    height: 468px;
+    padding: 21px 0 25px 0;
+    border: 1px solid #005aaa;
+    .smallBanner{
+        width: 303px;
+        height: 468px;
+        padding: 0 31px;
+        border-right: 1px solid #e5e5e5;
+        overflow: hidden;
+        position: relative;
+    }
+    .list-right{
+        position: relative;
+        width: 558px;
+        height: 468px;
+        padding: 0 40px 0 34px;
+        li{
+            float: left;
+            width: 166px;
+            height: 231px;
+            padding: 3px 10px;
+        }
+        .topli{
+            border-bottom: 1px solid #e9e9e9;
+        }
+    }
+} 
+.noticeContent{
+    position: relative;
+    h3{
+        font-family: 'Microsoft Yahei';
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 70px;
+        height: 50px;
+        padding-left: 2px;
+    }
+    a{
+        color: #ed1b23;
+    }
+    .noticeText{
+        line-height: 20px;
+        overflow: hidden;
+        width: 184px;
+        height: 100px;
+        padding: 12px 12px 8px 8px;
+        border: 1px solid #e9e9e9;
+        margin-bottom: 5px;
+    }
+    .noticeIcon{
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 37px;
+        height: 33px;
+        background: url(../img/indexSprite.png) -145px -23px no-repeat;
+    }
+    .newIcon{
+        display: inline-block;
+        width: 28px;
+        height: 12px;
+        background: url(../img/notice-hot.png) 0 0 no-repeat;
+    } 
+}
+.smallAd a{
+    display: block;
+    height: 191px;
+    margin-bottom: 5px;
+}
