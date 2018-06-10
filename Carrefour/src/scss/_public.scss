@@ -45,6 +45,9 @@ strong,b{
 	font-weight: normal
 }
 body{
+	width:100%;
+	overflow-x: hidden;
+	overflow-y: auto;
 	font: 12px/150% "Verdana,Arial,SimSun,Microsoft Yahei"
 }
 
@@ -111,4 +114,12 @@ $abs:absolute;
 	-moz-transform: rotate(360deg);
 	-o-transform: rotate(360deg);
 	-ms-transform: rotate(360deg);
+}
+
+@mixin rotate180(){
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
 }

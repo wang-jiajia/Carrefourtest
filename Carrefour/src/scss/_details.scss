@@ -1,0 +1,306 @@
+.categoryTitle-detailPage:hover{
+    i{
+        @include background-set("../img/category-arrow-up.png",no-repeat);
+    }
+    .category-menu{
+        display: block;
+        position: absolute;
+        z-index: 20;
+    }
+}
+.commodityInfo{
+    padding-top: 25px;
+    background-color: #f6f6f6;
+    .infoBox{
+        margin-bottom: 25px;
+        border: solid 1px #e8e8e8;
+        background-color: #fff;
+    }
+}
+.detail-left{
+    .picPreview{
+        position: relative;
+    }
+    width: 409px;
+    border-right: solid 1px #e8e8e8;
+    .smallPicBox{
+        overflow: hidden;
+        width: 409px;
+        height: 402px;
+        .smallPic{
+            width: 409px;
+            height: 402px;
+        }
+        .scale{
+            position: absolute;
+            background: rgb(13, 0, 184);
+            @include opacity-set(0.5);
+        }
+    }
+    .bigPicBox{
+        position: absolute;
+        top: 0;
+        left: 420px;
+        overflow: hidden;
+        .bigPic{
+            position: absolute;
+        }
+    }
+}
+.picSwitch{
+    position: relative;
+    width: 409px;
+    height: 68px;
+    margin-top: 20px;
+    .leftClick{
+        width: 10px;
+        height: 22px;
+        position: absolute;
+        top: 25px;
+        left: 5px;
+        background: url(../img/detail.png) -105px 0 no-repeat;
+    }
+    .rightClick{
+        width: 10px;
+        height: 22px;
+        position: absolute;
+        top: 25px;
+        right: 5px;
+        background: url(../img/detail.png) -105px -61px no-repeat;
+    }
+    .scrollBox{
+        position: absolute;
+        top: 0;
+        left: 15px;
+        overflow: hidden;
+        width: 380px;
+        height: 64px;
+        ul{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 64px;
+        }
+        li{
+            float: left;
+            width: 76px;
+            height: 64px;
+        }
+        img{
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            margin: 0 6px;
+            padding: 1px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        .selected img{
+            border: solid 1px #ed1b23;
+        }
+    }
+}
+.collect-share{
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0 30px 25px;
+    a{  
+        float: left;
+        margin-right: 25px;
+        color: #1e1e1e;
+    }
+    i{
+        float: left;
+        width: 15px;
+        height: 15px;
+        margin: 3px 8px 0 0;
+    }
+    .shareBtn i{
+        background: url(../img/detail.png) 0 -118px no-repeat;
+    }
+    .collectBtn i{
+        background: url(../img/detail.png) 0 -144px no-repeat;
+    }
+}
+.detail-right{
+    position: relative;
+    overflow: hidden;
+    width: 798px;
+    height: 553px;
+}
+.comTitle{
+    font-family: 'Microsoft Yahei';
+    font-weight: bold;
+    line-height: 22px;
+    height: auto;
+    padding: 11px 36px;
+    h2{
+        font-size: 22px;
+    }
+}
+.comPrice{
+    position: relative;
+    margin: 35px 0 7px 0;
+    padding-left: 45px;
+    background-color: #fff65f;
+    dl{
+        line-height: 72px;
+        height: 72px;
+        padding: 28px 0 11px 0;
+    }
+    dt{
+        float: left;
+        min-width: 70px;
+        margin-right: 10px;
+        text-align: right;
+    }
+    dd{
+        float: left;
+        overflow: hidden;
+        width: auto;
+        font-size: 48px;
+        font-weight: bolder;
+        color: #ed1b23;
+    }
+    em{
+        float: left;
+        font-family: Arial;
+        font-size: 24px;
+        font-style: normal;
+        margin-top: -4px;
+    }
+    b{
+        float: left;
+        font-size: 48px;
+        font-weight: normal;
+        margin-top: -7px;
+    }
+    i{
+        float: left;
+        font-size: 24px;
+        font-style: normal;
+        margin-top: -7px;
+    }
+}
+.saleInfo{
+    margin-top: 30px;
+    line-height: 26px;
+    overflow: hidden;
+    padding-left: 45px;
+    strong{
+        min-width: 70px;
+        margin-right: 10px;
+        text-align: right;
+    }
+    em{
+        max-width: 670px;
+        margin-right: 5px;
+        color: #fff;
+        padding: 0 5px;
+        background-color: #ed1b23;
+    }
+    span{
+        color:#005aaa; 
+    }
+}
+.serviceInfo{
+    margin-top:30px;
+    line-height: 26px;
+    overflow: hidden;
+    padding-left: 45px;
+    em{
+        font-weight: 800;
+        color: blue; 
+    }
+    b{
+        font-weight: 800;
+    }
+
+}
+.buyBtnBox{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 30px;
+    padding-left: 45px;
+    .numberInput{
+        position: relative;
+        float: left;
+        width: 77px;
+        height: 56px;
+    }
+    .buyNumber{
+        font-family: Arial;
+        font-size: 28px;
+        line-height: 33px;
+        position: absolute;
+        top: 0;
+        left: 3px;
+        width: 37px;
+        height: 33px;
+        padding: 10px 4px;
+        text-align: center;
+        color: #9e9e9e;
+        border: solid 1px #d5d5d5;
+        border-right: none;
+        outline: none;
+    }
+    .input-plus{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 28px;
+        height: 27px;
+        cursor: pointer;
+        background: url(../img/detail.png) no-repeat 0 0;
+    }
+    .greyLine{
+        position: absolute;
+        top: 27px;
+        right: 0;
+        width: 28px;
+        height: 1px;
+        background: #d5d5d5;
+    }
+    .input-minus{
+        position: absolute;
+        top: 28px;
+        right: 0;
+        width: 28px;
+        height: 27px;
+        cursor: pointer;
+        background: url(../img/detail.png) no-repeat 0 -88px;
+    }
+    .least{
+        background: url(../img/detail.png) 0 -29px no-repeat;
+    }
+    .buyBtn{
+        font-size: 20px;
+        line-height: 56px;
+        float: left;
+        width: 168px;
+        height: 56px;
+        margin-left: 20px;
+        text-indent: 44px;
+        color: #fff;
+        cursor: pointer;
+        background: url(../img/detail.png) 0 -397px no-repeat;
+    }
+}
+.supportInfo{
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 720px;
+    height: 30px;
+    margin-left: 46px;
+    border-top: 1px dotted #e0e0e0;
+    i{
+        float: left;
+        width: 20px;
+        height: 19px;
+        margin: 5px 6px 0 0;
+        background: url(../img/seven.png) 0 -18px no-repeat;
+    }
+}
