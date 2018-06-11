@@ -324,9 +324,8 @@
 .fixedBar{
     position: fixed;
     z-index: 100;
-    top: 0;
+    top: -58px;
     left: 0;
-    display: none;
     width: 100%;
     height: 58px;
     .barBg{

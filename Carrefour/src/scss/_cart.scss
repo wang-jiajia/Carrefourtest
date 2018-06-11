@@ -83,3 +83,211 @@
         }
     }
 }
+.cartList{
+    text-align: center;
+    border: solid 1px #e8e8e8;
+    border-bottom: none;
+    background-color: #fff;
+    .titleBox{
+        font-size: 14px;
+        line-height: 42px;
+        border-bottom: solid 2px #ed1b23;
+        li{
+            height: 42px;
+        }
+    }
+    li{
+        float: left;
+    }
+    .li01{
+        position: relative;
+        width: 482px;
+        .checkBox{
+            float: left;
+        }
+    }
+    .li02{
+        width: 77px;
+    }
+    .li03{
+        width: 127px;
+    }
+    .li04{
+        width: 75px;
+    }
+    .li05{
+        width: 100px;
+    }
+    .li06{
+        width: 118px;
+    }
+}
+.goodsInfo{
+    padding-bottom: 5px;
+    border-bottom: solid 1px #e5e5e5;
+    .list-content{
+        line-height: 72px;
+        padding: 20px 0;
+    }
+    .li01{
+       a{
+            float: left;
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            padding: 6px;
+            border: solid 1px #f1f1f1;
+            background-color: #fff;
+        } 
+        img{
+            width: 60px;
+            height: 60px;
+        }
+        .goodstitle{
+            text-align: left;
+            font-size: 14px;
+            line-height: 72px;
+            overflow: hidden;
+            max-height: 72px;
+            white-space: normal;
+            text-overflow: ellipsis;
+        }
+        span{
+            margin-left: 20px;
+        }
+    } 
+    .li02{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    .li03{
+        .numberInput{
+            width: 73px;
+            height: 23px;
+            margin: 0 auto;
+            padding-top: 28px;
+        }
+        .number-plus{
+            float: left;
+            width: 13px;
+            height: 13px;
+            margin-top: 5px;
+            cursor: pointer;
+            background: url(../img/cart.png) -37px -13px no-repeat;
+        }
+        .number-input{
+            line-height: 13px;
+            width: 20px;
+            height: 13px;
+            padding: 4px 7px;
+            margin: 0 5px;
+            text-align: center;
+            color: #595757;
+            border:  1px solid #9fa0a0;
+        }
+        .number-minus{
+            float: left;
+            width: 13px;
+            height: 13px;
+            margin-top: 5px;
+            cursor: pointer;
+            background: url(../img/cart.png) -21px -13px no-repeat;
+        } 
+    }
+    .li04{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #ed1b23;
+    }
+    .li05{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #9e9e9e;
+    }
+    .li06{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+}
+.total-content{
+    line-height: 28px;
+    height: 150px;
+    margin-top: 20px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    .checkbox{
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .total-info{
+        padding-top: 20px;
+        padding-right: 30px;
+        text-align: right;
+        span{
+            display: inline-block;
+            width: 150px;
+            margin-left: 35px;
+        }
+        .totalPrice{
+            strong{
+                color: #de2c30;
+            }
+        }
+        .big-total-price{
+            font-size: 20px;
+            font-weight: bolder;
+            strong{
+                font-family: Arial, Helvetica, sans-serif;
+                float: right;
+                width: 112px;
+                color: #de2c30;
+            }
+            border-top: 1px solid #ccc;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+    }
+}
+.cartBtn{
+    padding-top: 20px;
+    .continueBtn{
+        margin-right: 20px;
+        line-height: 40px;
+        width: 135px;
+        height: 40px;
+        text-align: center;
+        background: url(../img/cart.png) no-repeat 0 -201px;
+        a{
+            color: #1e1e1e;
+        }
+    }
+    .clear-balance{
+        a{  
+            float: right;
+            width: 180px;
+            height: 40px;
+            background: #aeaeae;
+        }
+        span{
+            font-size: 20px;
+            font-style: normal;
+            line-height: 44px;
+            float: left;
+            text-indent: 55px;
+            color: #fff;
+        }
+        i{
+            float: left;
+            width: 9px;
+            height: 15px;
+            margin-top: 16px;
+            margin-left: 10px;
+            background: url(../img/Arrow.png) no-repeat;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 40px;
+            text-indent: 55px;
+            color: #fff;
+        }
+    }
+}

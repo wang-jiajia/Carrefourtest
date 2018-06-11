@@ -110,7 +110,6 @@
             float: left;
             width: 790px;
             height: 480px;
-            background:#24f906;
         }
     }
     .orderDot{
@@ -221,9 +220,8 @@
     padding: 21px 0 25px 0;
     border: 1px solid #005aaa;
     .smallBanner{
-        width: 303px;
+        width: 365px;
         height: 468px;
-        padding: 0 31px;
         border-right: 1px solid #e5e5e5;
         overflow: hidden;
         position: relative;
@@ -241,6 +239,136 @@
         }
         .topli{
             border-bottom: 1px solid #e9e9e9;
+        }
+        a{
+            color:#1e1e1e;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+        p{
+            margin-top: 10px;
+            font-size: 14px;
+            height:38px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        span{
+            display: block;
+            margin-top: 10px;
+            color: #e4212d;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+}
+.smallBanner{
+    ul{
+        width: 303px;
+        height: 468px;
+        padding: 0 31px;
+        li{ 
+            float: left;
+            width:100%;
+            height:100%;
+        }
+    }
+    a{
+        color:#1e1e1e;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    img{
+        width:280px;
+        height:280px;
+        margin: 20px auto 0;
+    }
+    p{
+        width: 250px;
+        height: 40px;
+        margin: 20px auto 0;
+        line-height: 20px;
+        overflow: hidden;
+        font-family: 'Microsoft Yahei';
+        font-weight: bold;
+        font-size: 15px;
+        text-align: left;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    span{
+        display: block;
+        width: 250px;
+        height: 40px;
+        margin: 20px auto 0;
+        line-height: 20px;
+        overflow: hidden;
+        font-family: 'Microsoft Yahei';
+        color: #e4212d;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: left;
+    }
+    ol{
+        position: absolute;
+        bottom: 6px;
+        left: 166px;
+        display: inline-block;
+        line-height: 24px;
+        li{ 
+            text-indent: -9999px;
+            float: left;
+            width: 8px;
+            height: 8px;
+            padding: 0 2px;
+            border-top: none !important;
+            background: url(../img/big-icon.png) 0 0 no-repeat;
+        }
+        .active{
+            background: url(../img/big-icon-cur.png) 0 0 no-repeat;
+        }
+    }
+    %arrow{
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 50%;
+        margin-top: -13px;
+        background: rgba(0,0,0,0.5);
+        cursor: pointer;
+        @include border-radius-set(50%);
+        span{
+            display: block;
+            width: 11px;
+            height: 17px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    .arrow-left{
+        @extend %arrow;
+        left: 10px;
+        span{
+            @include background-set("../img/slider-left.png");
+        }
+    }
+    .arrow-right{
+        @extend %arrow;
+        right: 10px;
+        span{
+            @include background-set("../img/slider-right.png");
         }
     }
 }
@@ -418,6 +546,35 @@
         height: 196px;
         border-right: 1px solid #e9e9e9;
         border-bottom: 1px solid #e9e9e9;
+        a{
+            color: #1e1e1e;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    p{
+        width:160px;
+        margin:0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    span{
+        display: block;
+        width: 160px;
+        margin:0 auto;
+        text-align: left;
+        color:#ed1b23;
+        font-size: 16px;
     }
 }
 .floorCommodity-1{
