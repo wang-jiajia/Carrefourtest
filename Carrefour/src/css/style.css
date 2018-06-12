@@ -665,8 +665,10 @@ body {
   position: fixed;
   top: 50%;
   margin-top: -186px;
-  width: 40px;
-  cursor: pointer; }
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  overflow: hidden; }
   .sideNav li {
     line-height: 22px;
     font-size: 16px;
@@ -812,7 +814,8 @@ body {
   position: relative;
   overflow: hidden;
   width: 790px;
-  height: 480px; }
+  height: 480px;
+  display: none; }
   .bannerBox .bannerList {
     position: absolute;
     top: 0;
@@ -853,6 +856,7 @@ body {
     margin-top: -13px;
     background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    display: none;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -877,6 +881,11 @@ body {
     .bannerBox .arrow-right span {
       background: url("../img/slider-right.png") 0 0 no-repeat; }
 
+.loadingpic {
+  width: 790px;
+  height: 480px;
+  background: url(../img/1392662524764.gif) no-repeat center; }
+
 .rightAd a {
   overflow: hidden;
   display: block;
@@ -896,7 +905,8 @@ body {
     float: left;
     width: 250px;
     height: 51px;
-    background: #eeeeee; }
+    background: #eeeeee;
+    cursor: pointer; }
     .proContent .tabs li .on {
       display: none; }
     .proContent .tabs li .off {
@@ -917,11 +927,10 @@ body {
   padding: 21px 0 25px 0;
   border: 1px solid #005aaa; }
   .proList .smallBanner {
-    width: 365px;
+    width: 303px;
     height: 468px;
-    border-right: 1px solid #e5e5e5;
-    overflow: hidden;
-    position: relative; }
+    padding: 0 31px;
+    border-right: 1px solid #e5e5e5; }
   .proList .itemList {
     position: relative;
     width: 558px;
@@ -945,7 +954,8 @@ body {
     .proList .itemList p {
       margin-top: 10px;
       font-size: 14px;
-      height: 38px; }
+      height: 38px;
+      overflow: hidden; }
       .proList .itemList p:hover {
         text-decoration: underline; }
     .proList .itemList span {
@@ -955,14 +965,25 @@ body {
       font-weight: bold;
       font-size: 16px; }
 
-.smallBanner ul {
+.smallBanner .smallBannerBox {
   width: 303px;
   height: 468px;
-  padding: 0 31px; }
+  display: none;
+  overflow: hidden;
+  position: relative; }
+
+.smallBanner .loadingpic {
+  width: 100%;
+  height: 100%; }
+
+.smallBanner ul {
+  position: absolute;
+  width: 303px;
+  height: 468px; }
   .smallBanner ul li {
     float: left;
-    width: 100%;
-    height: 100%; }
+    width: 303px;
+    height: 468px; }
 
 .smallBanner a {
   color: #1e1e1e; }
@@ -1003,7 +1024,8 @@ body {
 .smallBanner ol {
   position: absolute;
   bottom: 6px;
-  left: 166px;
+  left: 50%;
+  margin-left: -24px;
   display: inline-block;
   line-height: 24px; }
   .smallBanner ol li {
@@ -1012,6 +1034,7 @@ body {
     width: 8px;
     height: 8px;
     padding: 0 2px;
+    cursor: pointer;
     border-top: none !important;
     background: url(../img/big-icon.png) 0 0 no-repeat; }
   .smallBanner ol .active {
@@ -1025,6 +1048,7 @@ body {
   margin-top: -13px;
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  display: none;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1349,21 +1373,30 @@ body {
   .detail-left .smallPicBox {
     overflow: hidden;
     width: 409px;
-    height: 402px; }
+    height: 409px; }
     .detail-left .smallPicBox .smallPic {
       width: 409px;
-      height: 402px; }
+      height: 409px; }
     .detail-left .smallPicBox .scale {
       position: absolute;
       background: #0d00b8;
-      opacity: 0.5;
-      filter: alpha(opacity=50); }
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+      display: none;
+      z-index: 20; }
   .detail-left .bigPicBox {
     position: absolute;
+    width: 600px;
+    height: 600px;
     top: 0;
     left: 420px;
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 20;
+    border: 1px solid #e8e8e8;
+    display: none; }
     .detail-left .bigPicBox .bigPic {
+      width: 800px;
+      height: 800px;
       position: absolute; }
 
 .picSwitch {
@@ -1377,14 +1410,18 @@ body {
     position: absolute;
     top: 25px;
     left: 5px;
-    background: url(../img/detail.png) -105px 0 no-repeat; }
+    background: url(../img/detail.png) -105px 0 no-repeat;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0); }
   .picSwitch .rightClick {
     width: 10px;
     height: 22px;
     position: absolute;
     top: 25px;
     right: 5px;
-    background: url(../img/detail.png) -105px -61px no-repeat; }
+    background: url(../img/detail.png) -105px -61px no-repeat;
+    cursor: pointer; }
   .picSwitch .scrollBox {
     position: absolute;
     top: 0;

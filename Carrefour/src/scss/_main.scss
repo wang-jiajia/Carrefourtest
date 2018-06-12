@@ -102,6 +102,7 @@
     overflow: hidden;
     width: 790px;
     height: 480px;
+    display: none;
     .bannerList{
         position: absolute;
         top: 0;
@@ -143,6 +144,7 @@
         margin-top: -13px;
         background: rgba(0,0,0,0.5);
         cursor: pointer;
+        display: none;
         @include border-radius-set(50%);
         span{
             display: block;
@@ -155,7 +157,6 @@
             bottom: 0;
             margin: auto;
         }
-        
     }
     .arrow-left{
         @extend %arrow;
@@ -163,7 +164,6 @@
         span{
             @include background-set("../img/slider-left.png");
         }
-        
     }
     .arrow-right{
         @extend %arrow;
@@ -172,6 +172,11 @@
             @include background-set("../img/slider-right.png");
         }
     }
+}
+.loadingpic{
+    width: 790px;
+    height: 480px;
+    background: url(../img/1392662524764.gif) no-repeat center;
 }
 .rightAd a{
     overflow: hidden;
@@ -194,6 +199,7 @@
         width: 250px;
         height: 51px;
         background: rgb(238, 238, 238);
+        cursor: pointer;
         .on{
             display: none;
         }
@@ -220,11 +226,10 @@
     padding: 21px 0 25px 0;
     border: 1px solid #005aaa;
     .smallBanner{
-        width: 365px;
+        width: 303px;
         height: 468px;
+        padding: 0 31px;
         border-right: 1px solid #e5e5e5;
-        overflow: hidden;
-        position: relative;
     }
     .itemList{
         position: relative;
@@ -255,6 +260,7 @@
             margin-top: 10px;
             font-size: 14px;
             height:38px;
+            overflow: hidden;
             &:hover{
                 text-decoration: underline;
             }
@@ -269,14 +275,25 @@
     }
 }
 .smallBanner{
-    ul{
+    .smallBannerBox{
         width: 303px;
         height: 468px;
-        padding: 0 31px;
-        li{ 
+        display: none;
+        overflow: hidden;
+        position: relative;
+    }
+    .loadingpic{
+        width:100%;
+        height: 100%;
+    }
+    ul{
+        position: absolute;
+        width: 303px;
+        height: 468px;
+        li{
             float: left;
-            width:100%;
-            height:100%;
+            width: 303px;
+            height: 468px;
         }
     }
     a{
@@ -320,7 +337,8 @@
     ol{
         position: absolute;
         bottom: 6px;
-        left: 166px;
+        left: 50%;
+        margin-left: -24px;
         display: inline-block;
         line-height: 24px;
         li{ 
@@ -329,6 +347,7 @@
             width: 8px;
             height: 8px;
             padding: 0 2px;
+            cursor: pointer;
             border-top: none !important;
             background: url(../img/big-icon.png) 0 0 no-repeat;
         }
@@ -344,6 +363,7 @@
         margin-top: -13px;
         background: rgba(0,0,0,0.5);
         cursor: pointer;
+        display: none;
         @include border-radius-set(50%);
         span{
             display: block;
@@ -482,7 +502,7 @@
             white-space: nowrap;
             text-overflow: ellipsis;
         }
-        a{  
+        a{
             font-weight: bold;
             color: #ffffff;
         }
@@ -494,7 +514,7 @@
         margin-right: auto;
         margin-left: auto;
         background-color: #fff;
-    } 
+    }
 }
 .floorContent{
     position: relative;

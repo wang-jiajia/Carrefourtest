@@ -377,8 +377,10 @@
     position: fixed;
     top: 50%;
     margin-top: -186px;
-    width: 40px;
+    width: 0;
+    height: 0;
     cursor: pointer;
+    overflow: hidden;
     li{
         line-height: 22px;
         font-size: 16px;

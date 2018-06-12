@@ -29,12 +29,20 @@
     	}
     }
 
+    //详情页数据
+    $result4=mysql_query('select * from details');
+    $detailsarr=array();
+    for($i=0;$i<mysql_num_rows($result4);$i++){
+        $detailsarr[$i]=mysql_fetch_array($result4,MYSQLI_ASSOC);
+    }
+
     class allData{
     	public function fn(){
-    		global $bnarr,$sbnarr,$totalarr;
+    		global $bnarr,$sbnarr,$totalarr,$detailsarr;
     		$this->bannerData=$bnarr;
     		$this->sbannerData=$sbnarr;
     		$this->commodityData=$totalarr;
+            $this->detailsData=$detailsarr;
     		echo json_encode($this);
     	}
     }

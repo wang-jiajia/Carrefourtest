@@ -26,23 +26,32 @@
     .smallPicBox{
         overflow: hidden;
         width: 409px;
-        height: 402px;
+        height: 409px;
         .smallPic{
             width: 409px;
-            height: 402px;
+            height: 409px;
         }
         .scale{
             position: absolute;
             background: rgb(13, 0, 184);
-            @include opacity-set(0.5);
+            @include opacity-set(0.3);
+            display: none;
+            z-index: 20;
         }
     }
     .bigPicBox{
         position: absolute;
+        width: 600px;
+        height: 600px;
         top: 0;
         left: 420px;
         overflow: hidden;
+        z-index: 20;
+        border: 1px solid #e8e8e8;
+        display: none;
         .bigPic{
+            width: 800px;
+            height: 800px;
             position: absolute;
         }
     }
@@ -59,6 +68,8 @@
         top: 25px;
         left: 5px;
         background: url(../img/detail.png) -105px 0 no-repeat;
+        cursor: pointer;
+        @include opacity-set(0);
     }
     .rightClick{
         width: 10px;
@@ -67,6 +78,7 @@
         top: 25px;
         right: 5px;
         background: url(../img/detail.png) -105px -61px no-repeat;
+        cursor: pointer;
     }
     .scrollBox{
         position: absolute;
