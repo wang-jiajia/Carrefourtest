@@ -35,8 +35,9 @@
 					<img src="http://www.carrefour.cn//assets/upload/adv/80881d1ff56e76f046408cd6d8d8ba15.jpg" alt="">
 				</a>
 			</div>
+			<!-- 登录表单 -->
 			<div class="loginFormBox fr">
-				<form id="loginForm" action="../../login.php">
+				<form id="loginForm" action="">
 					<div class="infoInPut nameInput">
 						<label for="username"></label>
 						<input type="text" id="username" name="username" value="邮箱/用户名/手机号" class="grayColor">
@@ -51,8 +52,9 @@
 					</div>
 					<div class="rememberCheck">
 						<input type="checkbox" id="rememberCheck" name="rememberCheck">
-						<label for="rememberCheck">记住用户名</label>|
-						<a href="#">忘记密码？</a>
+						<label for="rememberCheck" class="rememberMe">一周内免登录</label>|
+						<a href="javascript:;">忘记密码？</a>
+						<p class="rememberWarning">提示：请勿在网吧等公共场所使用此选项！</p>
 					</div>
 					<div class="loginBtn">
 						<input type="button" value="登录" class="button">
@@ -71,10 +73,14 @@
 				<br>
 				Copyright © 家乐福网上商城 2015 All Rights Reserved
 				<a href="#" target="_blank">
-					<img src="http://localhost/Carrefourtest/Carrefour/src/img/73ce6165acedcdd46fa558bcf59aa974.gif" alt="">
+					<img src="https://www.carrefour.cn/assets/upload/adv/73ce6165acedcdd46fa558bcf59aa974.gif" alt="">
 				</a>
 			</p>
 		</div>
 	</div>
+
+	<script type="text/javascript" src="../script/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="../script/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../script/js/login.js"></script>
 </body>
 </html>

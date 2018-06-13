@@ -236,3 +236,16 @@
 		},200);
 	})
 })(jQuery);
+
+;//登录功能
+(function($){
+	if($.cookie('username')){
+		$('.not-logged-in').hide();
+		$('.logged_in').show().find('.loginName').html($.cookie('username'));
+	}
+	$('.logout').on('click',function(){
+		$.cookie('username',null,{expires: -1});
+		$('.logged_in').hide();
+		$('.not-logged-in').show();
+	});
+})(jQuery);

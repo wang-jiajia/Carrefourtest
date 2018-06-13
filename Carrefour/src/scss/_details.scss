@@ -281,10 +281,13 @@
         width: 28px;
         height: 27px;
         cursor: pointer;
-        background: url(../img/detail.png) no-repeat 0 -88px;
+        background: url(../img/detail.png) 0 -88px no-repeat;
     }
     .least{
         background: url(../img/detail.png) 0 -29px no-repeat;
+    }
+    .most{
+        background: url(../img/detail.png) 0 -59px no-repeat;
     }
     .buyBtn{
         font-size: 20px;
