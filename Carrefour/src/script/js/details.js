@@ -126,6 +126,25 @@
 			that.numM();
 		});
 		this.$numInput.on('blur',function(){
+			var $reg = /^\d+$/g;
+			if($reg.test($(this).val())){
+				if($(this).val()>=99){
+					$(this).val(99);
+					that.$numPlus.addClass('most');
+					that.$numMinus.removeClass('least');
+				}else if($(this).val()<=1){
+					$(this).val(1);
+					that.$numMinus.addClass('least');
+					that.$numPlus.removeClass('most');
+				}else{
+					that.$numMinus.removeClass('least');
+					that.$numPlus.removeClass('most');
+				}
+			}else{
+				$(this).val(1);
+				that.$numMinus.addClass('least');
+				that.$numPlus.removeClass('most');
+			}
 			that.numToBuy=$(this).val();
 		});
 	}
@@ -164,4 +183,36 @@
 		$('.not-logged-in').show();
 	});
 	$('.not-logged-in .toLogin').attr('href','login.html?'+location.search.slice(1));
+})(jQuery);
+
+;//加入购物车功能
+(function($){
+	//1.定义数组存放商品sid和商品数量
+	var sidarr=[];
+	var numarr=[];
+	//2.获取cookie的函数，这里提前约定了存放信息的cookie的名称
+	function getcookievalue(){
+		if($.cookie('cartsid')){ //存放商品sid的cookie
+			sidarr=$.cookie('cartsid').split(',');
+		}
+		if($.cookie('cartnum')){ //存放商品数量的cookie
+			numarr=$.cookie('cartnum').split(',');
+		}
+	}
+	//3.判断商品的sid是否已在cookie里，如果在，则无需再向cookie添加，只需把对应的商品数量增加即可
+	$('.buyBtn').on('click',function(){
+		var sid= $(this).parents('.detail-right').find('.comTitle h2').attr('sid');//当前按钮对应商品sid，存在商品标题元素h2的自定义属性上
+		getcookievalue();//获取商品的id和数量,放到对应的数组中,利用数组进行匹配
+		if($.inArray(sid, sidarr) != -1){ //当前的sid是否存在cookie中(-1表示不存在)
+			//存在，则将之前的数据和当前存的数据相加，存放cookie里面
+			var num=parseInt(numarr[$.inArray(sid,sidarr)])+parseInt($('.buyNumber').val());
+			numarr[$.inArray(sid,sidarr)]=num;
+			$.cookie('cartnum',numarr.toString(),{expires: 7});//修改后的结果
+		}else{ //不存在，则直接加入cookie
+			sidarr.push(sid);
+			$.cookie('cartsid',sidarr.toString(),{expires: 7});
+			numarr.push($('.buyNumber').val());
+			$.cookie('cartnum',numarr.toString(),{expires: 7});
+		}
+	});
 })(jQuery);

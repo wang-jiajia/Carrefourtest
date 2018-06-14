@@ -26,13 +26,13 @@
                 <ul class="menuBox clearfix">
                     <li class="login_reg">
                         <span class="not-logged-in">
-                            <a href="login.html">[登录]</a>
+                            <a href="login.html?fromcart">[登录]</a>
                             <a href="register.html">[注册]</a>
                         </span>
                         <span class="logged_in hide">
                             <span>你好！&nbsp;</span>
                             <span class="loginName"></span>
-                            <a href="javascript" class="logout">退出</a>
+                            <a href="javascript:;" class="logout">退出</a>
                         </span>
                     </li>
                     <li class="myOrder">
@@ -166,50 +166,53 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="goodsInfo">
-                        <ul class="list-content clearfix">
-                            <li class="li01">
-                                <div class="checkBox">
-                                    <input type="checkbox" class="goods-select">
-                                </div>
-                                <a href="javascript:;">
-                                    <img src="http://www.carrefour.cn//assets/upload/product/81423a1bf53da1a9f5c06a887314e5ab_70x70.jpg" alt="">
-                                </a>
-                                <div class="goodstitle">
-                                    <span>法国之光多尔多涅草莓果酱 325克</span>
-                                    <p>
-                                        <i class="pro-seven"></i>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="li02">
-                                <span>¥39.00</span>
-                            </li>
-                            <li class="li03">
-                                <div class="numberInput clearfix">
-                                    <div class="number-plus fl"></div>
-                                    <input type="text" class="number-input fl" value="1">
-                                    <div class="number-minus fl"></div>
-                                </div>
-                            </li>
-                            <li class="li04">
-                                <span>¥39.00</span>
-                            </li>
-                            <li class="li05">
-                                <span>0.540kg</span>
-                            </li>
-                            <li class="li06">
-                                <div class="deleteGoods">
-                                    <a href="javascript:;" class="delete">删除</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="goodsInfoUl">
+                        <li class="goodsInfo hide">
+                            <ul class="list-content clearfix">
+                                <li class="li01">
+                                    <div class="checkBox">
+                                        <input type="checkbox" class="goods-select">
+                                    </div>
+                                    <a href="javascript:;">
+                                        <img src="http://www.carrefour.cn//assets/upload/product/81423a1bf53da1a9f5c06a887314e5ab_70x70.jpg" alt="">
+                                    </a>
+                                    <div class="goodstitle">
+                                        <a href="javascript:;"><span>法国之光多尔多涅草莓果酱 325克</span>
+                                        <p></a>
+                                            <i class="pro-seven"></i>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="li02">
+                                    <span>¥39.00</span>
+                                </li>
+                                <li class="li03">
+                                    <div class="numberInput clearfix">
+                                        <div class="number-minus fl"></div>
+                                        <input type="text" class="number-input fl" value="1">
+                                        <div class="number-plus fl"></div>
+                                    </div>
+                                </li>
+                                <li class="li04">
+                                    ¥<span>39.00</span>
+                                </li>
+                                <li class="li05">
+                                    <span>0.000kg</span>
+                                </li>
+                                <li class="li06">
+                                    <div class="deleteGoods">
+                                        <a href="javascript:;" class="delete">删除</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="total-content clearfix">
                     <div class="checkbox fl">
                         <input type="checkbox" class="all-select goods-select">
-                        全选
+                        全选<br>
+                        <a href="javascript:;" class="deleteall">删除选中的商品</a>
                     </div>
                     <div class="total-info fr">
                         <div class="info-detail">
@@ -233,11 +236,15 @@
                         </a>
                     </div>
                     <div class="continueBtn fr">
-                        <a href="javascript:;">继续购物</a>
+                        <a href="index.html">继续购物</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="../script/lib/jquery.min.js"></script>
+    <script src="../script/lib/jquery.cookie.js"></script>
+    <script src="../script/js/cart.js"></script>
 </body>
 </html>

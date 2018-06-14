@@ -1400,8 +1400,8 @@ body {
       z-index: 20; }
   .detail-left .bigPicBox {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     top: 0;
     left: 420px;
     overflow: hidden;
@@ -1748,7 +1748,8 @@ body {
 
 .goodsInfo {
   padding-bottom: 5px;
-  border-bottom: solid 1px #e5e5e5; }
+  border-bottom: solid 1px #e5e5e5;
+  float: none !important; }
   .goodsInfo .list-content {
     line-height: 72px;
     padding: 20px 0; }
@@ -1771,6 +1772,13 @@ body {
     max-height: 72px;
     white-space: normal;
     text-overflow: ellipsis; }
+    .goodsInfo .li01 .goodstitle a {
+      float: none;
+      overflow: visible;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: #1e1e1e; }
   .goodsInfo .li01 span {
     margin-left: 20px; }
   .goodsInfo .li02 {
@@ -1787,7 +1795,7 @@ body {
     height: 13px;
     margin-top: 5px;
     cursor: pointer;
-    background: url(../img/cart.png) -37px -13px no-repeat; }
+    background: url(../img/cart.png) -21px -13px no-repeat; }
   .goodsInfo .li03 .number-input {
     line-height: 13px;
     width: 20px;
@@ -1803,7 +1811,7 @@ body {
     height: 13px;
     margin-top: 5px;
     cursor: pointer;
-    background: url(../img/cart.png) -21px -13px no-repeat; }
+    background: url(../img/cart.png) -37px -13px no-repeat; }
   .goodsInfo .li04 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -1815,6 +1823,8 @@ body {
   .goodsInfo .li06 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px; }
+    .goodsInfo .li06 a {
+      color: #091DFF; }
 
 .total-content {
   line-height: 28px;
@@ -1825,6 +1835,9 @@ body {
   .total-content .checkbox {
     line-height: 40px;
     font-size: 13px; }
+  .total-content .deleteall {
+    color: #091DFF;
+    margin-left: 25px; }
   .total-content .total-info {
     padding-top: 20px;
     padding-right: 30px;
@@ -1862,7 +1875,7 @@ body {
     float: right;
     width: 180px;
     height: 40px;
-    background: #aeaeae; }
+    background: #ec1b23; }
   .cartBtn .clear-balance span {
     font-size: 20px;
     font-style: normal;

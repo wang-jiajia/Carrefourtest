@@ -125,12 +125,13 @@
 .goodsInfo{
     padding-bottom: 5px;
     border-bottom: solid 1px #e5e5e5;
+    float:none !important;
     .list-content{
         line-height: 72px;
         padding: 20px 0;
     }
     .li01{
-       a{
+        a{
             float: left;
             overflow: hidden;
             width: 60px;
@@ -151,6 +152,14 @@
             max-height: 72px;
             white-space: normal;
             text-overflow: ellipsis;
+            a{
+                float: none;
+                overflow:visible;
+                padding:0;
+                border:0;
+                background:none;
+                color: #1e1e1e;
+            }
         }
         span{
             margin-left: 20px;
@@ -173,7 +182,7 @@
             height: 13px;
             margin-top: 5px;
             cursor: pointer;
-            background: url(../img/cart.png) -37px -13px no-repeat;
+            background: url(../img/cart.png) -21px -13px no-repeat;
         }
         .number-input{
             line-height: 13px;
@@ -191,7 +200,7 @@
             height: 13px;
             margin-top: 5px;
             cursor: pointer;
-            background: url(../img/cart.png) -21px -13px no-repeat;
+            background: url(../img/cart.png) -37px -13px no-repeat;
         } 
     }
     .li04{
@@ -207,6 +216,9 @@
     .li06{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
+        a{
+            color: #091DFF;
+        }
     }
 }
 .total-content{
@@ -218,6 +230,10 @@
     .checkbox{
         line-height: 40px;
         font-size: 13px;
+    }
+    .deleteall{
+        color: #091DFF;
+        margin-left:25px;
     }
     .total-info{
         padding-top: 20px;
@@ -266,7 +282,7 @@
             float: right;
             width: 180px;
             height: 40px;
-            background: #aeaeae;
+            background: #ec1b23;
         }
         span{
             font-size: 20px;

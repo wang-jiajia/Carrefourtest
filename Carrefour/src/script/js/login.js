@@ -60,8 +60,10 @@
 					}else{
 						$.cookie('username', $uvalue);
 					}
-					if(location.search){
+					if(location.search.slice(1,4) == 'sid'){
 						location.href='details.html'+location.search;
+					}else if(location.search == '?fromcart'){
+						location.href='cart.html';
 					}else{
 						location.href='index.html';
 					}
