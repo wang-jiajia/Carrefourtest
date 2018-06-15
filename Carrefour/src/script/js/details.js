@@ -194,9 +194,13 @@
 	function getcookievalue(){
 		if($.cookie('cartsid')){ //存放商品sid的cookie
 			sidarr=$.cookie('cartsid').split(',');
+		}else{
+			sidarr=[];
 		}
 		if($.cookie('cartnum')){ //存放商品数量的cookie
 			numarr=$.cookie('cartnum').split(',');
+		}else{
+			numarr=[];
 		}
 	}
 	//3.判断商品的sid是否已在cookie里，如果在，则无需再向cookie添加，只需把对应的商品数量增加即可

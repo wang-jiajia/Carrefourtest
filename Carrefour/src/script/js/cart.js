@@ -152,7 +152,7 @@
 	function setcookie($obj){
 		cookieToArray();
 		var $sid=$obj.parents('.goodsInfo').find('img').attr('sid');
-		numarr[sidarr.indexOf($sid)]=$obj.parents('.goodsInfo').find('.number-input').val();
+		numarr[$.inArray($sid,sidarr)]=$obj.parents('.goodsInfo').find('.number-input').val();
 		$.cookie('cartnum',numarr.toString(),{expires: 7});
 	}
 	//9.删除商品
@@ -181,12 +181,14 @@
 	});
 	//删除全部选中商品的函数
 	$('.total-content .deleteall').on('click',function(){
-		$('.goodsInfo:visible').each(function(){
-			if($(this).find('input:checkbox').is(':checked')){
-				$(this).remove();
-				deletegoods($(this).find('img').attr('sid'),sidarr);
-			}
-		});
+		if(confirm('你确定要删除全部选中商品吗？')){
+			$('.goodsInfo:visible').each(function(){
+				if($(this).find('input:checkbox').is(':checked')){
+					$(this).remove();
+					deletegoods($(this).find('img').attr('sid'),sidarr);
+				}
+			});
+		}
 		totalcalculate();
 		checkempty();
 	});
