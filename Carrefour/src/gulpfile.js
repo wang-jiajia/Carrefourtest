@@ -84,8 +84,23 @@ gulp.task('imagemin',function(){
 	.pipe(imagemin())
 	.pipe(gulp.dest('../dist/img'));
 })
+
+//7.压缩 js
+gulp.task('uglifyjs',function(){
+    gulp.src('script/*/*.js')
+    .pipe(uglify())
+    .on('error', swallowError)
+    .pipe(gulp.dest('../dist/script'));
+});
+//监听压缩 js
+gulp.task('watchjs',function(){
+    gulp.watch('script/*/*.js',function(){
+        gulp.run('uglifyjs');
+    });
+});
+
 //执行任务
-gulp.task('default',['watchhtml','watchsass','watchcss','connect','connectwatch','imagemin']);
+gulp.task('default',['watchhtml','watchsass','watchcss','connect','connectwatch','imagemin','watchjs']);
 
 
 
